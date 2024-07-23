@@ -5,6 +5,7 @@ provider "registry.terraform.io/gavinbunney/kubectl" {
   version     = "1.14.0"
   constraints = ">= 1.14.0"
   hashes = [
+    "h1:ItrWfCZMzM2JmvDncihBMalNLutsAk7kyyxVRaipftY=",
     "h1:gLFn+RvP37sVzp9qnFCwngRjjFV649r6apjxvJ1E/SE=",
     "zh:0350f3122ff711984bbc36f6093c1fe19043173fad5a904bce27f86afe3cc858",
     "zh:07ca36c7aa7533e8325b38232c77c04d6ef1081cb0bac9d56e8ccd51f12f2030",
@@ -22,6 +23,7 @@ provider "registry.terraform.io/hashicorp/external" {
   version = "2.3.1"
   hashes = [
     "h1:bROCw6g5D/3fFnWeJ01L4IrdnJl1ILU8DGDgXCtYzaY=",
+    "h1:gznGscVJ0USxy4CdihpjRKPsKvyGr/zqPvBoFLJTQDc=",
     "zh:001e2886dc81fc98cf17cf34c0d53cb2dae1e869464792576e11b0f34ee92f54",
     "zh:2eeac58dd75b1abdf91945ac4284c9ccb2bfb17fa9bdb5f5d408148ff553b3ee",
     "zh:2fc39079ba61411a737df2908942e6970cb67ed2f4fb19090cd44ce2082903dd",
@@ -42,6 +44,7 @@ provider "registry.terraform.io/hashicorp/helm" {
   constraints = ">= 2.9.0"
   hashes = [
     "h1:D5BLFN82WndhQZQleXE5rO0hUDnlyqb60XeUJKDhuo4=",
+    "h1:fEDID5J/9ret/sLpOSNAu98F/ZBEZhOmL0Leut7m5JU=",
     "zh:1471cb45908b426104687c962007b2980cfde294fa3530fabc4798ce9fb6c20c",
     "zh:1572e9cec20591ec08ece797b3630802be816a5adde36ca91a93359f2430b130",
     "zh:1b10ae03cf5ab1ae21ffaac2251de99797294ae4242b156b3b0beebbdbcb7e0f",
@@ -58,8 +61,10 @@ provider "registry.terraform.io/hashicorp/helm" {
 }
 
 provider "registry.terraform.io/hashicorp/kubernetes" {
-  version = "2.19.0"
+  version     = "2.19.0"
+  constraints = ">= 2.18.1"
   hashes = [
+    "h1:ID/u9YOv00w+Z8iG+592oyuV7HcqRmPiZpEC9hnyTMY=",
     "h1:soxnBBEH2yLFS0xyALi7J8KQ4u7eQzEYIGvkDyyYCcU=",
     "zh:028d346460de2d1d19b4c863dfc36be51c7bcd97d372b54a3a946bcb19f3f613",
     "zh:391d0b38c455437d0a2ab1beb6ce6e1230aa4160bbae11c58b2810b258b44280",
@@ -81,6 +86,7 @@ provider "registry.terraform.io/mrparkers/keycloak" {
   constraints = ">= 4.2.0"
   hashes = [
     "h1:0Z10wRvT3mrlm10AzTQIQy0h1QN6u8qAnePJKXxmvHw=",
+    "h1:KJqhfaQrzVAqhO/U40Tkk05rB0a7s0SjJ2NpBOGq7nQ=",
     "zh:0158a265b74b3e800864a78e24a822278aca250e97d5b4ac7ceb3fba9ff8d468",
     "zh:1067bda8ec35e5f77de9fa6296fbb17d4f931692d624c50a6e97486982185422",
     "zh:29ca6d1f647d82cf64641946b128ed90e2d3702fb7e79a432a692766d9bf66cc",
@@ -105,6 +111,7 @@ provider "registry.terraform.io/scott-the-programmer/minikube" {
   version     = "0.2.3"
   constraints = "0.2.3"
   hashes = [
+    "h1:Ley+AkQ3HZciIEB/OnJm2oxHslwz3JYUOG0viM+QiXU=",
     "h1:x+oaH4eqqdEJ4u2qutnA8nV9dGKycRIzdXp9+qpi8X8=",
     "zh:094bf0b31ce7fb86c92928a4f53b1979563e1d145472209f44813376f5e3cdef",
     "zh:0f3155d72c2c952dfbc663bc9de4e0a476ab8741f3a87314d98e43cbd3e2f32a",

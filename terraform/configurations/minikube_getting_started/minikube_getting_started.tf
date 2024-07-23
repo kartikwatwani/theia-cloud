@@ -4,7 +4,7 @@ variable "kubernetes_version" {
 }
 
 variable "cert_manager_issuer_email" {
-  description = "EMail address used to create certificates."
+  description = "Email address used to create certificates."
 }
 
 variable "keycloak_admin_password" {
@@ -25,7 +25,7 @@ module "cluster" {
   cpus         = 4
   disk_size    = "51200mb"
   memory       = "8192mb"
-  driver       = "virtualbox"
+  driver       = "docker"
 }
 
 provider "kubernetes" {

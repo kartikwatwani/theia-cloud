@@ -1,11 +1,16 @@
 variable "project_id" {
   description = "The GCE project id"
 }
+
+variable "service_account_email" {
+  description = "The email of the service account for the GKE nodes"
+}
+
 variable "location" {
   description = "The zone of the created cluster"
 }
 variable "cluster_name" {
-  default     = "gke-theia-cloud-getting-started"
+  default     = "gke-theia-cloud"
   description = "The name of the created cluster"
 }
 
@@ -29,11 +34,15 @@ variable "primary_node_pool_max_nodes" {
   description = "Maximum number of nodes for the primary node pool"
 }
 
+
 resource "google_container_cluster" "primary" {
   name                     = var.cluster_name
   location                 = var.location
   remove_default_node_pool = true
   initial_node_count       = 1
+    node_config {
+    service_account = var.service_account_email
+   }
 }
 
 resource "google_container_node_pool" "primary_nodes" {
@@ -48,6 +57,7 @@ resource "google_container_node_pool" "primary_nodes" {
   }
 
   node_config {
+    service_account = var.service_account_email
     preemptible  = false
     machine_type = var.primary_node_pool_machine
     metadata = {

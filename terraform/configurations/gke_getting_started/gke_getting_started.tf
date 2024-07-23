@@ -2,13 +2,17 @@ variable "project_id" {
   description = "The GCE project id"
 }
 
+variable "service_account_email" {
+  description = "The email of the service account for the GKE nodes"
+}
+
 variable "location" {
   description = "The zone of the created cluster"
-  default     = "europe-west3-c"
+  default     = "asia-south2-a"
 }
 
 variable "cert_manager_issuer_email" {
-  description = "EMail address used to create certificates."
+  description = "Email address used to create certificates."
 }
 
 variable "keycloak_admin_password" {
@@ -37,6 +41,7 @@ module "cluster" {
   # adjust values below
   project_id = var.project_id
   location   = var.location
+  service_account_email = var.service_account_email
 }
 
 resource "google_compute_address" "host_ip" {
